@@ -1,3 +1,4 @@
+# packages
 import numpy as np
 import pandas as pd
 from flask import Flask, request, render_template
@@ -17,7 +18,7 @@ def ValuePredictor(to_predict_list):
     return result[0]
 
 
-
+# route function for results display
 @app.route('/result',methods=['POST'])
 def result():
     if request.method== 'POST':
