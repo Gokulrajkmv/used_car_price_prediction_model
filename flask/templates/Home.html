@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Used Car price prediction App</title>
+    <link rel="stylesheet" href="static/Master.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+</head>
+
+  <body>
+
+
+
+
+
+        <nav class="navbar navbar-dark bg-primary">
+         <div class="navbar-header">
+           <a class="navbar-brand" href="#">Homepage</a>
+         </nav>
+
+
+
+
+
+
+                  <!-- Jumbotron -->
+
+                    <div class="container">
+
+                      <div class="jumbotron">
+
+                        <h1><p class="text-secondary">Planning to buy used car check this out!</p></h1>
+
+                        <p>This web application try to predict the used car price based on the input given from user</p>
+                        <h3>This web app deployed for testing</h3>
+
+                      </div>
+
+
+<div class="p-3 mb-2 bg-secondary text-white">
+<h3> kindly enter the details to predict the price of the used car </h3>
+<br>
+               <form action="/result" method="POST" class=".form-control">
+
+                 <!-- label -->
+                 <label for="car_name">Enter your car name</label>
+                 <select id="car_name" name="car_name">
+                   <option value="69">Audi A4</option>
+                   <option value="80">Audi A6</option>
+                  <option value="94">Audi A8</option>
+                  <option value="87">Audi Q7</option>
+                  <option value="75">BMW 3</option>
+                    <option value="93">BMW 5</option>
+                     <option value="112">BMW 6</option>
+                     <option value="95">BMW 7</option>
+                     <option value="84">BMW X1</option>
+                     <option value="85">BMW X3</option>
+                     <option value="113">BMW X4</option>
+                     <option value="102">BMW X5</option>
+                     <option value="101">BMW Z4</option>
+                     <option value="85">BMW X3</option>
+                     <option value="119">Bentley Continental</option>
+                    <option value="11">Datsun GO</option>
+                     <option value="3">Datsun RediGO</option>
+                     <option value="3">Datsun redi-GO</option>
+                     <option value="121">Ferrari GTC4Lusso</option>
+                     <option value="43">Force Gurkha</option>
+                     <option value="29">Ford Aspire</option>
+                      <option value="41">Ford Ecosport</option>
+                       <option value="89">Ford Endeavour</option>
+                      <option value="4">Ford Figo</option>
+                     <option value="42">Ford Freestyle</option>
+                      <option value="18">Honda Amaze</option>
+                     <option value="78">Honda CR</option>
+                      <option value="68">Honda CR-V</option>
+                     <option value="37">Honda City</option>
+                     <option value="6">Honda Civic</option>
+                     <option value="36">Honda Jazz</option>
+                     <option value="47">Honda WR-V</option>
+                    <option value="54">Hyundai Aura</option>
+                     <option value="57">Hyundai Creta</option>
+                     <option value="53">Hyundai Elantra</option>
+                    <option value="19">Hyundai Grand</option>
+                     <option value="1">Hyundai Santro</option>
+                     <option value="77">Hyundai Tucson</option>
+                     <option value="60">Hyundai Venue</option>
+                    <option value="34">Hyundai Verna</option>
+                   <option value="5">Hyundai i10</option>
+                     <option value="31">HHyundai i20</option>
+                     <option value="83">ISUZU MUX</option>
+                     <option value="65">Isuzu D-Max</option>
+                     <option value="86">Isuzu MUX</option>
+                     <option value="108">Jaguar F-PACE</option>
+                     <option value="96">Jaguar XE</option>
+                     <option value="88">Jaguar XF</option>
+                     <option value="71">Jeep Compass</option>
+                     <option value="110">Jeep Wrangler</option>
+                    <option value="97">Kia Carnival</option>
+                    <option value="70">Kia Seltos</option>
+                    <option value="98">Land Rover Rover</option>
+                    <option value="103">Lexus ES</option>
+                    <option value="111">Lexus NX</option>
+                     <option value="118">Lexus RX</option>
+                      <option value="118">MG Hector</option>
+                     <option value="92">Mahindra Alturas</option>
+                     <option value="27">Mahindra Bolero</option>
+                     <option value="12">Mahindra KUV</option>
+                     <option value="23">Mahindra KUV100</option>
+                     <option value="61">Mahindra Marazzo</option>
+                     <option value="48">Mahindra Scorpio</option>
+                     <option value="52">Mahindra Thar</option>
+                     <option value="58">Mahindra XUV300</option>
+                      <option value="55">Mahindra XUV500</option>
+                     <option value="2">Maruti Alto</option>
+                    <option value="38">Maruti Baleno</option>
+                     <option value="14">Maruti Celerio</option>
+                     <option value="44">Maruti Ciaz</option>
+                     <option value="13">Maruti Dzire LXI</option>
+                     <option value="22">Maruti Dzire VXI</option>
+                     <option value="24">Maruti Dzire ZXI</option>
+                     <option value="10">Maruti Eeco</option>
+                     <option value="45">Maruti Ertiga</option>
+                     <option value="30">Maruti Ignis</option>
+                     <option value="15">Maruti S-Presso</option>
+                     <option value="17">Maruti Swift</option>
+                     <option value="26">Maruti Swift Dzire</option>
+                     <option value="50">Maruti Vitara</option>
+                     <option value="7">Maruti Wagon R</option>
+                     <option value="63">Maruti XL6</option>
+                     <option value="116">Maserati Ghibli</option>
+                     <option value="115">Maserati Quattroporte</option>
+                     <option value="109">Mercedes-AMG C</option>
+                     <option value="67">Mercedes-Benz C-Class</option>
+                     <option value="99">Mercedes-Benz CLS</option>
+                     <option value="72">Mercedes-Benz E-Class</option>
+                     <option value="100">Mercedes-Benz GL-Class</option>
+                    <option value="117">Mercedes-Benz GLS</option>
+                     <option value="90">Mercedes-Benz S-Class</option>
+                    <option value="81">Mini Cooper</option>
+                     <option value="56">Nissan Kicks</option>
+                     <option value="35">Nissan X-Trail</option>
+                    <option value="105">Porsche Cayenne</option>
+                     <option value="114">Porsche Macan</option>
+                    <option value="106">Porsche Panamera</option>
+                      <option value="32">Renault Duster</option>
+                       <option value="9">Renault KWID</option>
+                     <option value="40">Renault Triber</option>
+                     <option value="120">Rolls-Royce Ghost</option>
+                     <option value="64">Skoda Octavia</option>
+                    <option value="28">Skoda Rapid</option>
+                     <option value="39">Skoda Superb</option>
+                      <option value="46">Tata Altroz</option>
+                       <option value="76">Tata Harrier</option>
+                    <option value="66">Tata Hexa</option>
+                    <option value="49">Tata Nexon</option>
+                    <option value="20">Tata Safari</option>
+                     <option value="16">Tata Tiago</option>
+                    <option value="33">Tata Tigor</option>
+                     <option value="82">Toyota Camry</option>
+                     <option value="73">Toyota Fortuner</option>
+                     <option value="73">Toyota Glanza</option>
+                     <option value="62">Toyota Innova</option>
+                      <option value="59">Toyota Yaris</option>
+                     <option value="25">Volkswagen Polo</option>
+                    <option value="21">Volkswagen Vento</option>
+                    <option value="104">Volvo S90</option>
+                     <option value="91">Volvo XC</option>
+                     <option value="74">Volvo XC60</option>
+                    <option value="107">Volvo XC90</option>
+                </select>
+                 <br>
+                 <br>
+                 <label for="model">Enter the model</label>
+                 <select id="model" name="model">
+                   <option value="75">3</option>
+                   <option value="92">5</option>
+                   <option value="111">6</option>
+                  <option value="94">7</option>
+                   <option value="69">A4</option>
+                   <option value="80">A6</option>
+                   <option value="93">A8</option>
+                   <option value="2">Alto</option>
+                   <option value="46">Altroz</option>
+                   <option value="91">Alturas</option>
+                   <option value="18">Amaze</option>
+                   <option value="29">Aspire</option>
+                  <option value="54">Aura</option>
+                   <option value="38">Baleno</option>
+                    <option value="27">Bolero</option>
+                   <option value="108">C</option>
+                  <option value="67">C-Class</option>
+                   <option value="98">CLS</option>
+                    <option value="78">CR</option>
+                   <option value="68">CR-V</option>
+                   <option value="81">Camry</option>
+                  <option value="96">Carnival</option>
+                   <option value="104">Cayenne</option>
+                   <option value="14">Celerio</option>
+                  <option value="44">Ciaz</option>
+                   <option value="37">City</option>
+                   <option value="6">Civic</option>
+                   <option value="71">Compass</option>
+                   <option value="118">Continental</option>
+                   <option value="82">Cooper</option>
+                   <option value="57">Creta</option>
+                   <option value="65">D-Max</option>
+                   <option value="31">Duster</option>
+                   <option value="13">Dzire LXI</option>
+                   <option value="22">Dzire VXI</option>
+                   <option value="23">Dzire ZXI</option>
+                  <option value="72">E-Class</option>
+                   <option value="102">ES</option>
+                   <option value="41">Ecosport</option>
+                    <option value="10">Eeco</option>
+                   <option value="53">Elantra</option>
+                   <option value="88">Endeavour</option>
+                   <option value="45">Ertiga</option>
+                   <option value="107">F-PACE</option>
+                   <option value="4">Figo</option>
+                   <option value="73">Fortuner</option>
+                    <option value="42">Freestyle</option>
+                  <option value="99">GL-Class</option>
+                   <option value="116">GLS</option>
+                   <option value="11">GO</option>
+                   <option value="120">GTC4Lusso</option>
+                    <option value="115">Ghibli</option>
+                   <option value="119">Ghost</option>
+                   <option value="51">Glanza</option>
+                   <option value="19">Grand</option>
+                   <option value="43">Gurkha</option>
+                    <option value="76">Harrier</option>
+                   <option value="79">Hector</option>
+                   <option value="66">Hexa</option>
+                   <option value="30">Ignis</option>
+                   <option value="62">Innova</option>
+                    <option value="36">Jazz</option>
+                   <option value="12">KUV</option>
+                   <option value="24">KUV100</option>
+                   <option value="9">KWID</option>
+                   <option value="56">Kicks</option>
+                   <option value="83">MUX</option>
+                   <option value="113">Macan</option>
+                   <option value="61">Marazzo</option>
+                   <option value="110">NX</option>
+                   <option value="49">Nexon</option>
+                   <option value="64">Octavia</option>
+                   <option value="105">Panamera</option>
+                   <option value="25">Polo</option>
+                   <option value="86">Q7</option>
+                   <option value="114">Quattroporte</option>
+                   <option value="117">RX</option>
+                   <option value="28">Rapid</option>
+                   <option value="3">RediGO</option>
+                   <option value="97">Rover</option>
+                    <option value="89">S-Class</option>
+                   <option value="15">S-Presso</option>
+                   <option value="103">S90</option>
+                   <option value="20">Safari</option>
+                   <option value="1">Santro</option>
+                   <option value="47">Scorpio</option>
+                   <option value="70">Seltos</option>
+                   <option value="39">Superb</option>
+                   <option value="17">Swift</option>
+                   <option value="26">Swift Dzire</option>
+                   <option value="52">Thar</option>
+                   <option value="16">Tiago</option>
+                   <option value="32">Tigor</option>
+                   <option value="40">Triber</option>
+                   <option value="77">Tucson</option>
+                   <option value="21">Vento</option>
+                   <option value="60">Venue</option>
+                   <option value="34">Verna</option>
+                   <option value="50">Vitara</option>
+                   <option value="48">WR-V</option>
+                   <option value="7">Wagon R</option>
+                   <option value="109">Wrangler</option>
+                   <option value="35">X-Trail</option>
+                    <option value="84">X1</option>
+                    <option value="85">X3</option>
+                   <option value="112">X4</option>
+                   <option value="101">X5</option>
+                   <option value="90">XC</option>
+                    <option value="74">XC60</option>
+                   <option value="106">XC90</option>
+                   <option value="95">XE</option>
+                   <option value="87">XF</option>
+                   <option value="63">XL6</option>
+                   <option value="58">XUV300</option>
+                   <option value="55">XUV500</option>
+                   <option value="59">Yaris</option>
+                   <option value="100">Z4</option>
+                   <option value="5">i10</option>
+                   <option value="33">i20</option>
+                   <option value="8">redi-GO</option>
+
+                 </select>
+                 <br>
+                 <br>
+                 <label for="vehicle_age">Enter Vehicle Age: </label>
+                 <input type="number" min="0" step="1"id="vehicle_age" name="vehicle_age" placeholder="in(no. years)" />
+                 <br>
+                 <br>
+                 <label for="km_driven">kilometre driven</label>
+                 <input type="number" min="0" step="10"id="km_driven" name="km_driven" placeholder="Enter (Kms)" />
+                 <br>
+                 <br>
+                 <label for="fuel_type">fuel type of the car</label>
+                 <select id="fuel_type" name="fuel_type">
+                   <option value="2">CNG</option>
+                   <option value="1">Diesel</option>
+                   <option value="5">Electric</option>
+                   <option value="1">LPG</option>
+                   <option value="3">Petrol</option>
+                 </select>
+                 <br>
+                 <br>
+                 <label for="transmission_type">Transmission type of car</label>
+                 <select id="transmission_type" name="transmission_type">
+                   <option value="2">Automatic</option>
+                   <option value="1">Manual</option>
+                 </select>
+                 <br>
+                 <br>
+                 <label for="mileage">mileage of the car</label>
+                 <input type="number" min="1" step="1"id="mileage" name="mileage" placeholder="mileage" />
+                 <br>
+                 <br>
+                 <label for="seats">number of seats</label>
+                 <select id="seats" name="seats">
+                   <option value="7">2 seater</option>
+                   <option value="6">4 seater</option>
+                   <option value="1">5 seater</option>
+                   <option value="2">6 seater</option>
+                   <option value="5">7 seater</option>
+                   <option value="4">8 seater</option>
+                   <option value="3">9 seater</option>
+                 <br>
+                 <br>
+                 <input class="btn btn-primary btn-lg "type="submit" value="Submit">
+                 <br>
+                 <br>
+                 <h1>{{prediction_text}}</h1>
+                 <br>
+                 <br>
+               </form>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="container" >
+  <div class="jumbotron">
+    <h1>Thank you!!!</h1>
+
+
+</div>
+</div>
+
+  </body>
+
+
+</html>
