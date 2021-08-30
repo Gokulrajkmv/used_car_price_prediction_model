@@ -18,7 +18,7 @@ def ValuePredictor(to_predict_list):
     return result[0]
 
 
-@app.route('/result',methods=['POST'])
+@app.route('/',methods=['POST'])
 def result():
     if request.method== 'POST':
         to_predict_list = request.form.to_dict()
