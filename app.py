@@ -18,7 +18,7 @@ def ValuePredictor(to_predict_list):
     return result[0]
 
 
-@app.route('/',methods=['POST'])
+@app.route('/results',methods=['POST'])
 def result():
     if request.method== 'POST':
         to_predict_list = request.form.to_dict()
@@ -32,9 +32,9 @@ def result():
         result =round(result,2)
 
         if result<0:
-            return render_template('Home.html',prediction_text="Sorry we can't get the predict price of your car")
+            return render_template('result.html',prediction_text="Sorry we can't get the predict price of your car")
         else:
-            return render_template('Home.html',prediction_text=f"selling price of the car  Rs.{result} in lakhs")
+            return render_template('result.html',prediction_text=f"selling price of the car  Rs.{result} in lakhs")
 
 if __name__ == '__main__':
     app.run(debug=True)
